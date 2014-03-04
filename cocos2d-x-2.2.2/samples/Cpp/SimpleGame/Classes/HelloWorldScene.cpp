@@ -2,6 +2,8 @@
 #include "GameOverScene.h"
 #include "SimpleAudioEngine.h"
 
+#include "Kamcord-C-Interface.h"
+
 using namespace cocos2d;
 
 HelloWorld::~HelloWorld()
@@ -106,6 +108,33 @@ bool HelloWorld::init()
 		_targets = new CCArray;
 		_projectiles = new CCArray;
 
+		// ********************** Codes for Kamcord Integration ***********************
+		// Set up start recording label
+        CCLabelTTF * startRecordingLabel = CCLabelTTF::create("Start Recording","Artial", 12);
+        startRecordingLabel->setColor( ccc3(0, 0, 0) );
+        
+        CCMenuItemLabel * startRecordingMenuItem = CCMenuItemLabel::create(startRecordingLabel, this, menu_selector(HelloWorld::startRecording));
+        
+        // Set up stop recording label
+        CCLabelTTF * stopRecordingLabel = CCLabelTTF::create("Stop Recording","Artial", 12);
+        stopRecordingLabel->setColor( ccc3(0, 0, 0) );
+        
+        CCMenuItemLabel * stopRecordingMenuItem = CCMenuItemLabel::create(stopRecordingLabel, this, menu_selector(HelloWorld::stopRecording));
+        
+        // Set up show view label
+        CCLabelTTF * showViewLabel = CCLabelTTF::create("Show View","Artial", 12);
+        showViewLabel->setColor( ccc3(0, 0, 0) );
+        
+        CCMenuItemLabel * showViewMenuItem = CCMenuItemLabel::create(showViewLabel, this, menu_selector(HelloWorld::showView));
+        
+        // Make the menu
+        CCMenu* menu = CCMenu::create( startRecordingMenuItem, stopRecordingMenuItem, showViewMenuItem, NULL);
+        menu->alignItemsVertically();
+        
+        this->addChild(menu);
+        menu->setPosition(ccp(origin.x + visibleSize.width - 60, origin.y + visibleSize.height - 50));
+        // ********************** End Codes for Kamcord Integration ***********************
+
 		// use updateGame instead of update, otherwise it will conflit with SelectorProtocol::update
 		// see http://www.cocos2d-x.org/boards/6/topics/1478
 		this->schedule( schedule_selector(HelloWorld::updateGame) );
@@ -116,6 +145,21 @@ bool HelloWorld::init()
 	} while (0);
 
 	return bRet;
+}
+
+void HelloWorld::startRecording(CCObject * pSender)
+{
+    Kamcord_StartRecording();
+}
+
+void HelloWorld::stopRecording(CCObject * pSender)
+{
+    Kamcord_StopRecording();
+}
+
+void HelloWorld::showView(CCObject * pSender)
+{
+    Kamcord_ShowView();
 }
 
 void HelloWorld::menuCloseCallback(CCObject* pSender)
@@ -176,9 +220,10 @@ void HelloWorld::spriteMoveFinished(CCNode* sender)
 	{
 		_targets->removeObject(sprite);
         
-		GameOverScene *gameOverScene = GameOverScene::create();
-		gameOverScene->getLayer()->getLabel()->setString("You Lose :[");
-		CCDirector::sharedDirector()->replaceScene(gameOverScene);
+        // Make sure the game never ends, for testing.
+		//GameOverScene *gameOverScene = GameOverScene::create();
+		//gameOverScene->getLayer()->getLabel()->setString("You Lose :[");
+		//CCDirector::sharedDirector()->replaceScene(gameOverScene);
 
 	}
 	else if (sprite->getTag() == 2) // projectile

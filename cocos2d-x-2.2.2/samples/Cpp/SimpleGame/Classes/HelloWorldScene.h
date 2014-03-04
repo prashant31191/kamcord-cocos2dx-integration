@@ -33,6 +33,9 @@ public:
 	void registerWithTouchDispatcher();
 	void ccTouchesEnded(cocos2d::CCSet* touches, cocos2d::CCEvent* event);
     
+    void startRecording(CCObject * pSender);
+    void stopRecording(CCObject * pSender);
+    void showView(CCObject * pSender);
     
 protected:
 	cocos2d::CCArray *_targets;

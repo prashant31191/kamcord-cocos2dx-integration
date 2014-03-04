@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<resources>
+	<string name="kamcordShare">
+		分享
+	</string>
+	<string name="kamcordWatch">
+		观看
+	</string>
+	<string name="kamcordWriteATitle">
+		写一个标题...
+	</string>
+	<string name="kamcordFacebook">
+		Facebook
+	</string>
+	<string name="kamcordYoutube">
+		YouTube
+	</string>
+	<string name="kamcordTwitter">
+		Twitter
+	</string>
+	<string name="kamcordEmail">
+		电子邮件
+	</string>
+	<string name="kamcordShareReplay">
+		分享视频
+	</string>
+	<string name="kamcordPoweredByKamcord">
+		Kamcord提供技术支持
+	</string>
+	<string name="kamcordUploadFinished">
+		上传完毕!
+	</string>
+	<string name="kamcordUploadFailed">
+		上传失败
+	</string>
+	<string name="kamcordUploading">
+		上传中 ...
+	</string>
+	<string name="kamcordOk">
+		确定
+	</string>
+</resources>

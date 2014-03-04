@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<resources>
+	<string name="kamcordShare">
+		シェアする
+	</string>
+	<string name="kamcordWatch">
+		見る
+	</string>
+	<string name="kamcordWriteATitle">
+		タイトルを書いて下さい...
+	</string>
+	<string name="kamcordFacebook">
+		Facebook
+	</string>
+	<string name="kamcordYoutube">
+		YouTube
+	</string>
+	<string name="kamcordTwitter">
+		Twitter
+	</string>
+	<string name="kamcordEmail">
+		Eメール
+	</string>
+	<string name="kamcordShareReplay">
+		リプレイをシェアする
+	</string>
+	<string name="kamcordPoweredByKamcord">
+		Kamcordを装備しています
+	</string>
+	<string name="kamcordUploadFinished">
+		アップロード完了!
+	</string>
+	<string name="kamcordUploadFailed">
+		アップロードが失敗しました
+	</string>
+	<string name="kamcordUploading">
+		アップロード中 ...
+	</string>
+	<string name="kamcordOk">
+		オーケー
+	</string>
+</resources>
