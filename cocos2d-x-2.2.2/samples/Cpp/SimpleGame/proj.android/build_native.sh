@@ -1,5 +1,8 @@
 APPNAME="SimpleGame"
 
+# This should point to where your installation of Android NDK lives.
+NDK_ROOT="/Users/pplunkett/dev/android/android-ndk-r9c"
+
 # options
 
 buildexternalsfromsource=

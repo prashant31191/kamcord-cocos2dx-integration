@@ -128,6 +128,11 @@
 			<locationURI>COCOS2DX/cocos2dx</locationURI>
 		</link>
 		<link>
+			<name>cocos2dx-src</name>
+			<type>2</type>
+			<location>/Users/pplunkett/dev/kamcord-cocos2dx-integration/cocos2d-x-2.2.2/cocos2dx/platform/android/java/src</location>
+		</link>
+		<link>
 			<name>cocosdenshion</name>
 			<type>2</type>
 			<locationURI>COCOS2DX/CocosDenshion</locationURI>
