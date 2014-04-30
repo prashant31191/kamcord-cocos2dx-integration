@@ -34,9 +34,15 @@ public class SimpleGame extends Cocos2dxActivity{
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		Kamcord.initActivity(this);
+		Kamcord.initKeyAndSecret("e5Wh6FfCEq0eqjoZJ4Ksqcql0v0j4Qkxr7dX7QI0ALV",
+				"7PVfe087qj20lq13Y16UJ6cre3be49afKFKAiO6VYOH",
+				"RippleTest",
+				Kamcord.STANDARD);
+
 	}
 	
     static {
+    	System.loadLibrary("kamcord");
         System.loadLibrary("game");
     }
 }

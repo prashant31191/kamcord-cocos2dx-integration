@@ -65,7 +65,9 @@
             android:background="@android:color/transparent"
             android:layout_width="17dp"
             android:layout_height="21dp"
-            android:layout_margin="15dp" />
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp" />
     
         <ImageButton
             android:id="@+id/prev"
@@ -74,7 +76,7 @@
             android:layout_width="11dp"
             android:layout_height="21dp"
             android:layout_marginTop="15dp"
-            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginBottom="15dp" />
         
         <TextView
@@ -82,7 +84,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="14sp"
-            android:textColor="#FCCC" />
+            android:textColor="#FCCC"
+            android:layout_marginLeft="15dp" />
         
         <SeekBar
             android:id="@+id/mediacontroller_progress"
@@ -91,14 +94,21 @@
             android:layout_weight="1"
             android:progressDrawable="@drawable/kamcord_seekbar_progress_style"
             android:thumb="@drawable/kamcord_seekbar_thumb_style"
-            android:gravity="center_vertical" />
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:minHeight="4dp"
+            android:maxHeight="4dp" />
         
         <TextView
             android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="14sp"
-            android:textColor="#FCCC" />
+            android:textColor="#FCCC"
+            android:layout_marginRight="15dp" />
         
         <ImageButton
             android:id="@+id/next"
@@ -107,7 +117,7 @@
             android:layout_width="11dp"
             android:layout_height="21dp"
             android:layout_marginTop="15dp"
-            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:layout_marginBottom="15dp" />
         
         <ImageButton
@@ -116,7 +126,9 @@
             android:contentDescription="@string/kamcordMediaDescription"
             android:layout_width="21dp"
             android:layout_height="21dp"
-            android:layout_margin="15dp" />
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="15dp" />
     
     </LinearLayout>
 

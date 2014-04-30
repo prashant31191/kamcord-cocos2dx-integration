@@ -4,31 +4,19 @@
     android:layout_height="match_parent"
     android:background="@android:color/transparent"
     android:orientation="vertical" >
-    
+
     <FrameLayout
         android:id="@+id/videoSurfaceContainer"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3"
-        android:background="#FF000000" >
-        
+        android:background="@drawable/kamcord_background_gradient" >
     </FrameLayout>
-    
-    <LinearLayout
-        android:id="@+id/intermediateViewContainer"
+
+    <com.kamcord.android.ClickCorrectWebView
+        android:id="@+id/intermediateBottom"
+        android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_width="match_parent"
-        android:layout_weight="2"
-        android:orientation="vertical"
-        android:background="#FFFFFFFF" >
-        
-            <com.kamcord.android.ClickCorrectWebView
-                android:id="@+id/intermediateView"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_gravity="center_horizontal"
-                android:visibility="invisible" />
-        
-    </LinearLayout>
-    
+        android:layout_weight="2" />
+
 </LinearLayout>

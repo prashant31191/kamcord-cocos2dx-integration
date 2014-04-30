@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kamcordChangeCredsBackground"
+    android:orientation="vertical"
+    android:padding="@dimen/kamcordChangeCredsPadding" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/kamcordChangeCredsPadding"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/kamcordChangeCredsPadding"
+        android:paddingRight="@dimen/kamcordChangeCredsPadding" >
+
+        <EditText
+            android:id="@+id/currentPasswordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/kamcordCurrentPassword"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:padding="@dimen/kamcordChangeCredsPadding"
+            android:singleLine="true"
+            android:textColor="#000"
+            android:textCursorDrawable="@null" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/kamcordChangeCredsPadding"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/kamcordChangeCredsPadding"
+        android:paddingRight="@dimen/kamcordChangeCredsPadding" >
+
+        <EditText
+            android:id="@+id/newCredEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:imeOptions="actionNext"
+            android:maxLines="1"
+            android:padding="@dimen/kamcordChangeCredsPadding"
+            android:singleLine="true"
+            android:textColor="#000"
+            android:textCursorDrawable="@null" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/kamcordDividerWidth"
+            android:background="@color/kamcordDividerColor" />
+
+        <EditText
+            android:id="@+id/newCredAgainEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:padding="@dimen/kamcordChangeCredsPadding"
+            android:singleLine="true"
+            android:textColor="#000"
+            android:textCursorDrawable="@null" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/changeCredButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/kamcordButtonHeight"
+        android:background="@color/kamcordButtonActive"
+        android:gravity="center"
+        android:textColor="@color/kamcordButtonTextColor"
+        android:textSize="@dimen/kamcordButtonTextsize" />
+
+</LinearLayout>

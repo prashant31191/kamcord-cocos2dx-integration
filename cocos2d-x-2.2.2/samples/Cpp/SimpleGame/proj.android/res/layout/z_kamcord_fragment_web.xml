@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_horizontal"
-    android:background="#cccccc"
     android:orientation="vertical" >
 
     <com.kamcord.android.ClickCorrectWebView
@@ -11,6 +10,6 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_gravity="center_horizontal"
-        android:visibility="invisible" />
+        android:background="@color/kamcordCreateProfileBackground" />
 
 </LinearLayout>
