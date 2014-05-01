@@ -39,6 +39,10 @@ Open Eclipse. Select File > New > Project..., and select "Android Project from E
 
 to the file `PROJ_ROOT`/build_native.sh. Be sure to replace `Your/path/to/NDK` with the actual path to the root NDK directory.
 
+<p align="center">
+<img src="https://s3.amazonaws.com/kamcord-static/img/documentation/Android/cocos2dx-build_native.sh-step2diff1.png" alt="Changes to build_native.sh" />
+</p>
+
 Next, we need to link the cocos2dx Java source into our project. To do this, right click on your project in the Package Explorer in Eclipse, and select Properties. Select "Java Build Path" from the left-hand pane, and then select the "Source" tab. Click on "Link Source..." and browse to `COCOS2DX_ROOT`/cocos2dx/platform/android/java/src/. For the folder name, put something other than "src", such as "cocos2dx-src", and then click "Finish". 
 
 To see the changes that are made in this step, use
