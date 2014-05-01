@@ -90,11 +90,23 @@ somewhere within the `include $(CLEAR_VARS) ... include $(BUILD_SHARED_LIBRARY)`
 
 after the first `include $(BUILD_SHARED_LIBRARY)` but before the `$(call ...)` lines.
 
+<p align="center">
+<img src="https://s3.amazonaws.com/kamcord-static/img/documentation/Android/cocos2dx-Android.mk-step3diff8.png" alt="Changes to Android.mk" />
+</p>
+
+<p align="center">
+<img src="https://s3.amazonaws.com/kamcord-static/img/documentation/Android/cocos2dx-Android.mk-step3diff9.png" alt="Changes to Android.mk" />
+</p>
+
 #### Add Integration Code ####
 
 Finally, we add the necessary codes into the project to enable Kamcord. In `PROJ_ROOT`/jni/hellocpp/main.cpp, add the following lines to `JNI_OnLoad`:
 
     KamcordAndroid_InitJVM(vm);
+
+<p align="center">
+<img src="https://s3.amazonaws.com/kamcord-static/img/documentation/Android/cocos2dx-main.cpp-step3diff10.png" alt="Changes to main.cpp" />
+</p>
 
 Next, in `PROJ_ROOT`/src/org/cocos2dx/simplegame/SimpleGame.java, add the following line to `onCreate`:
 
@@ -103,8 +115,18 @@ Next, in `PROJ_ROOT`/src/org/cocos2dx/simplegame/SimpleGame.java, add the follow
         "7PVfe087qj20lq13Y16UJ6cre3be49afKFKAiO6VYOH",
         "RippleTest",
         Kamcord.STANDARD);
+        
+<p align="center">
+<img src="https://s3.amazonaws.com/kamcord-static/img/documentation/Android/cocos2dx-SimpleGame.java-step3diff11.png" alt="Changes to SimpleGame.java" />
+</p>
 
-Finally, add `Kamcord.beginDraw();` and `Kamcord.endDraw();` around the `Cocos2dxRenderer.nativeRender();` call in `COCOS2DX_ROOT`/cocos2dx/platform/android/java/src/org/cocos2dx/lib/Cocos2dxRenderer.java in the `onDrawFrame` function. At this point, Kamcord is fully integrated! Congratulations!
+Finally, add `Kamcord.beginDraw();` and `Kamcord.endDraw();` around the `Cocos2dxRenderer.nativeRender();` call in `COCOS2DX_ROOT`/cocos2dx/platform/android/java/src/org/cocos2dx/lib/Cocos2dxRenderer.java in the `onDrawFrame` function.
+
+<p align="center">
+<img src="https://s3.amazonaws.com/kamcord-static/img/documentation/Android/cocos2dx-Cocos2dxRenderer.java-step3diff1.png" alt="Changes to Cocos2dxRenderer.java" />
+</p>
+
+At this point, Kamcord is fully integrated! Congratulations!
 
 #### Add GUI To Record ####
 
@@ -137,6 +159,10 @@ We still need some way of telling the app to start/stop recording footage. We ad
     menu->setPosition(ccp(origin.x + visibleSize.width - 60, origin.y + visibleSize.height - 50));
     // ********************** End Codes for Kamcord Integration ***********************
 
+<p align="center">
+<img src="https://s3.amazonaws.com/kamcord-static/img/documentation/Android/cocos2dx-HelloWorldScene.cpp-step3diff3.png" alt="Changes to HelloWorldScene.cpp" />
+</p>
+
 This code adds "Start Recording", "Stop Recording", and "Show View" buttons to the game screen. The last thing we need to do is add the calls to the correct Kamcord functions for starting and stopping a recording, and presenting the Kamcord UI. Inside the HelloWorld class, we put the following lines:
 
     void HelloWorld::startRecording(CCObject * pSender)
@@ -154,11 +180,19 @@ This code adds "Start Recording", "Stop Recording", and "Show View" buttons to t
         Kamcord_ShowView();
     }
     
+<p align="center">
+<img src="https://s3.amazonaws.com/kamcord-static/img/documentation/Android/cocos2dx-HelloWorldScene.cpp-step3diff4.png" alt="Changes to HelloWorldScene.cpp" />
+</p>
+    
 Finally, we added the corresponding function headers to HelloWorld.h:
 
     void startRecording(CCObject * pSender);
     void stopRecording(CCObject * pSender);
     void showView(CCObject * pSender);
+    
+<p align="center">
+<img src="https://s3.amazonaws.com/kamcord-static/img/documentation/Android/cocos2dx-HelloWorldScene.h-step3diff5.png" alt="Changes to HelloWorldScene.h" />
+</p>
 
 To see the changes that are made in this step, use
 
