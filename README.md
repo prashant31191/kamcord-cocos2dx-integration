@@ -66,6 +66,14 @@ First, we integrate all the necessary Kamcord resources such as layouts, drawabl
 
 The `<activity>` tags must go inside the `<application>` tag, and the `<uses-feature>` and `<uses-permission>` tags must go outside.
 
+<p align="center">
+<img src="https://s3.amazonaws.com/kamcord-static/img/documentation/Android/cocos2dx-AndroidManifest.xml-step3diff6.png" alt="Changes to AndroidManifest.xml" />
+</p>
+
+<p align="center">
+<img src="https://s3.amazonaws.com/kamcord-static/img/documentation/Android/cocos2dx-AndroidManifest.xml-step3diff7.png" alt="Changes to AndroidManifest.xml" />
+</p>
+
 Next, copy all of the Kamcord resources in the res/ folder of the Kamcord SDK into your project's res/ folder.
 
 #### Import Libraries/Codes ####
