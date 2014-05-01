@@ -1,4 +1,4 @@
-kamcord-cocos2sx-integration
+kamcord-cocos2dx-integration
 ============================
 
 ---
